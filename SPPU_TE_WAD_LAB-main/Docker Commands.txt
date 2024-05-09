@@ -1,0 +1,74 @@
+docker -v
+
+
+
+docker images
+
+
+
+docker ps
+
+
+
+docker pull OpenJDK
+
+
+docker images
+
+
+docker run --name JAVA -it -d OpenJDK
+
+
+
+docker ps
+
+
+docker exec -it JAVA jshell
+
+
+                ^
+
+System.out.println("Hello World!");
+Hello World!
+
+int a = 13;
+a ==> 13
+
+int b = 10;
+b ==> 10
+
+System.out.println("Sum: "+ (a+b));
+Sum: 23
+
+docker ps
+
+
+
+->jshell> /exit
+
+|  Goodbye
+
+
+
+docker ps
+
+
+docker stop b1a3e2f13f3b
+
+
+
+docker container rm b1a3e2f13f3b
+
+
+
+docker ps
+
+
+docker images
+
+
+
+docker image prune
+
+docker ps
+
